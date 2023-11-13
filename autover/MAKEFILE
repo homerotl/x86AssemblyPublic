@@ -1,0 +1,10 @@
+#
+# This makefile assumes you are using Borland's Turbo Assembler.
+# If that is not the case, you will need to change the tasm and 
+# tlink lines to masm and link
+#
+autover.exe: autover.obj
+	tlink /3 /l /m /s /v autover
+	
+autover.obj:			autover.asm
+	tasm autover;
